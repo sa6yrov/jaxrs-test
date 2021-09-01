@@ -17,6 +17,9 @@ public class UserService {
     public Response save(UserModel userModel){
         UserDao userDao = new UserDaoImpl();
         userDao.save(userModel);
+        //EXAMPLE
+        //Метод может возвращать просто Модельку (Java Class)
+        //Или может возвращать Response -> класс который пришел к нам от Jax rs, пример ниже
         return Response.ok()
                 .entity("УСпешно сохранено")
                 .build();
